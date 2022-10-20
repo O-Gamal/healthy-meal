@@ -3,13 +3,13 @@ import Logo from "./Logo"
 import SearchBar from "./SearchBar"
 
 
-const Nav = () => {
+const Header = () => {
     return (
-        <nav className="py-10 flex w-full justify-between">
+        <header className="py-10 flex w-full justify-between items-center">
             <Logo />
             <SearchBar />
             <Image src='/profile.png' width={50} height={50} alt='profile photo' objectFit="cover" className="duration-300 rounded-full cursor-pointer" />
-        </nav>
+        </header>
     )
 }
-export default Nav
+export default Header

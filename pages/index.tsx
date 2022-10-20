@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <main>
-
+        Test
       </main>
     </Layout>
   )

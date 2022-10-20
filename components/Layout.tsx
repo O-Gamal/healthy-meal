@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import React from 'react';
 import Footer from './Footer';
-import Nav from './Nav';
+import Header from './Header';
+import Menu from './Menu';
 
 export interface LayoutProps {
     title?: string;
@@ -17,9 +18,12 @@ const Layout = ({ title, description, children }: LayoutProps) => {
                 <meta name="description" content={description ? description : 'Discover high variety of delicious healthy food for all kinds of diet systems, customize your meals according to your preference and available Ingredients, and share your recipes with the world. '} />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className='w-full px-36 mx-auto'>
-                <Nav />
-                {children}
+            <div className='px-10'>
+                <Header />
+                <section className='flex flex-col gap-10 lg:flex-row'>
+                    <Menu />
+                    {children}
+                </section>
                 <Footer />
             </div>
         </div>
