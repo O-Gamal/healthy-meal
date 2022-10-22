@@ -23,13 +23,12 @@ const NavLink = ({ icon, label, href, shortcut }: NavLinkProps) => {
         }
 
         document.addEventListener("keypress", handleUserKeyPress);
-
         return () => document.removeEventListener("keypress", handleUserKeyPress)
     });
 
     return (
         <Link href={href}>
-            <div className={`flex justify-between px-3 py-1 rounded-md items-center cursor-pointer w-48 ${current ? 'bg-green shadow-md text-dark-primary font-semibold' : 'hover:bg-dark-secondary transition-colors duration-200'}`}>
+            <div className={`flex justify-between px-3 py-1 rounded-md items-center cursor-pointer w-full ${current ? 'bg-green shadow-md text-dark-primary font-semibold' : 'bg-dark-secondary bg-opacity-50 hover:bg-opacity-100 transition-opacity duration-200'}`}>
                 <div className="flex items-center gap-3">
                     {icon}
                     <p className='text-lg'>{label}</p>

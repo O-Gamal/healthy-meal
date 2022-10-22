@@ -20,7 +20,7 @@ const Layout = ({ title, description, children }: LayoutProps) => {
             </Head>
             <div className='px-10'>
                 <Header />
-                <section className='flex flex-col gap-10 lg:flex-row'>
+                <section className='flex flex-col gap-16 lg:flex-row'>
                     <Menu />
                     {children}
                 </section>
