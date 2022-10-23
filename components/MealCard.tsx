@@ -18,7 +18,7 @@ const MealCard = ({ photo, name, description, prep_time, calories, likes, user }
     const [bookmarked, setBookmarked] = useState(false);
 
     return (
-        <div className='w-96 rounded-lg bg-dark-secondary'>
+        <div className='w-96 rounded-xl bg-dark-secondary'>
             <Image src={photo} alt={name} width={400} height={250} objectFit='cover' className='rounded-lg cursor-pointer hover:opacity-80 transition-opacity' />
             <section className='p-5 space-y-8'>
                 <section className='flex items-center gap-3'>

@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import React from 'react';
-import Footer from './Footer';
 import Header from './Header';
 import Menu from './Menu';
 
@@ -20,11 +19,11 @@ const Layout = ({ title, description, children }: LayoutProps) => {
             </Head>
             <div className='px-10'>
                 <Header />
-                <section className='flex flex-col gap-16 lg:flex-row'>
+                <section className='relative'>
                     <Menu />
-                    {children}
+                    <div className='mx-auto'>{children}</div>
                 </section>
-                <Footer />
+                {/* <Footer /> */}
             </div>
         </div>
     )
