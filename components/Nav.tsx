@@ -1,7 +1,7 @@
 import { BookmarkIcon, Cog6ToothIcon, HomeIcon, PlusIcon } from '@heroicons/react/24/outline'
 import NavLink from "./NavLink"
 
-const Menu = () => {
+const Nav = () => {
 
     return (
         <section className='z-40 p-3 fixed bottom-5 drop-shadow-lg left-1/2 bg-opacity-30 -translate-x-1/2 bg-gunmetal rounded-full'>
@@ -16,4 +16,4 @@ const Menu = () => {
         </section>
     )
 }
-export default Menu
+export default Nav
