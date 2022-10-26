@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 const BookmarksPage: NextPage = () => {
   return (
-    <Layout>
+    <Layout user={{ name: 'Omar' }}>
       <div>BookmarksPage</div>
     </Layout>
   );

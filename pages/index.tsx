@@ -26,25 +26,25 @@ const Home: NextPage = () => {
   };
 
   return (
-    <Layout>
-      <main className="w-full space-y-10">
+    <Layout withSearch user={{ name: 'Omar' }}>
+      <main className='w-full space-y-10'>
         {/* <h2 className='text-3xl font-bold'>Home</h2> */}
-        <section className="space-y-5">
-          <section className="flex justify-center gap-5">
+        <section className='space-y-5'>
+          <section className='flex justify-center gap-5'>
             <MealsFilterCard />
             <RecommendCard />
           </section>
-          <section className="flex justify-center gap-5 items-center">
+          <section className='flex justify-center gap-5 items-center'>
             <Switch
-              size="md"
+              size='md'
               label={
-                <span className="text-white text-lg cursor-pointer select-none">
+                <span className='text-white text-lg cursor-pointer select-none'>
                   Following's meals only
                 </span>
               }
-              className=""
+              className=''
             />
-            <div className="space-x-2">
+            <div className='space-x-2'>
               {mealTypes.map((mealType) => (
                 <span
                   key={mealType}
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
             </div>
           </section>
         </section>
-        <section className="flex gap-5 justify-center flex-wrap w-full pb-28">
+        <section className='flex gap-5 justify-center flex-wrap w-full pb-28'>
           {meals.map((meal: MealType, index: number) => (
             <MealCard
               key={index}

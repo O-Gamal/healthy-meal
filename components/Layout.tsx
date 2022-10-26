@@ -8,7 +8,7 @@ export interface LayoutProps {
   description?: string;
   children: React.ReactNode;
   user?: { name: string };
-  noSaerch?: boolean;
+  withSearch?: boolean;
 }
 
 const Layout = ({
@@ -16,27 +16,27 @@ const Layout = ({
   description,
   children,
   user,
-  noSaerch,
+  withSearch,
 }: LayoutProps) => {
   return (
-    <div className="w-full">
+    <div className='w-full'>
       <Head>
         <title>{title ? title : 'Healthy Meal'}</title>
         <meta
-          name="description"
+          name='description'
           content={
             description
               ? description
               : 'Discover high variety of delicious healthy food for all kinds of diet systems, customize your meals according to your preference and available Ingredients, and share your recipes with the world. '
           }
         />
-        <link rel="icon" href="/static/img/favicon.svg" />
+        <link rel='icon' href='/static/img/favicon.svg' />
       </Head>
-      <div className="px-10">
-        <Header noSearch={noSaerch} />
-        <section className="relative">
+      <div className='px-10'>
+        <Header withSearch={withSearch} user={user} />
+        <section className='relative'>
           {user && <Nav />}
-          <div className="mx-auto">{children}</div>
+          <div className='mx-auto'>{children}</div>
         </section>
         {/* <Footer /> */}
       </div>

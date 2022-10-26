@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 const SettingsPage: NextPage = () => {
   return (
-    <Layout>
+    <Layout user={{ name: 'Omar' }}>
       <div>SettingsPage</div>
     </Layout>
   );
