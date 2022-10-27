@@ -15,4 +15,4 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      - run: docker push mofasa101/healthy-meal
+      - run: docker push omargamal19/healthy-meal
