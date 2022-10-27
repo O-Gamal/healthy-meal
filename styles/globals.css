@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .primary-button {
+    @apply bg-green text-dark-secondary py-2 font-semibold hover:bg-opacity-90 transition-opacity duration-200 rounded-md;
+  }
+
+  .secondary-button {
+    @apply text-white py-2 border border-white hover:border-green hover:text-green transition-colors duration-200 rounded-md;
+  }
+
+  .input {
+    @apply rounded-md border-none bg-gunmetal focus:ring-green;
+  }
+}

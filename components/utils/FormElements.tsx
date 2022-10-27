@@ -24,19 +24,15 @@ export const TextInput = ({ label, ...props }: TextInputProps) => {
 
   return (
     <div className='flex flex-col'>
-      <div className='flex items-center justify-between px-3 md:flex-row'>
-        <label className='my-2' htmlFor={props.id || props.name}>
+      <div className='flex items-center justify-between px-1 md:flex-row'>
+        <label className='my-2 text-lg' htmlFor={props.id || props.name}>
           {label}
         </label>
         {meta.touched && meta.error ? (
           <div className='text-center text-red-500'>{meta.error}</div>
         ) : null}
       </div>
-      <input
-        className='layout-border rounded-md text-lg dark:bg-zinc-900'
-        {...field}
-        {...props}
-      />
+      <input className='input text-lg dark:bg-zinc-900' {...field} {...props} />
     </div>
   );
 };

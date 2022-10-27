@@ -5,6 +5,9 @@ const nextConfig = {
   images: {
     domains: ['www.eatwell101.com', 'secure.gravatar.com'],
   },
+  // experimental: {
+  //   appDir: true,
+  // },
 };
 
 module.exports = nextConfig;

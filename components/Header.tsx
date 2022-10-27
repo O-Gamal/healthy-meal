@@ -24,15 +24,13 @@ const Header = ({ user, withSearch }: HeaderProps) => {
   const notLoggedinRender = (
     <div className='flex items-center gap-5'>
       <Link href='/signin'>
-        <a className='flex items-center gap-1 rounded-md py-2 px-4 border border-white hover:border-green hover:text-green transition-colors duration-200'>
+        <a className='secondary-button flex items-center gap-1 px-4'>
           <UserCircleIcon className='w-5 h-5' />
           Sign In
         </a>
       </Link>
       <Link href='/signup'>
-        <a className='rounded-md py-2 px-4 border bg-green font-semibold hover:bg-opacity-80 text-dark-primary transition-colors duration-200'>
-          Sign Up
-        </a>
+        <a className='primary-button px-4'>Sign Up</a>
       </Link>
     </div>
   );
