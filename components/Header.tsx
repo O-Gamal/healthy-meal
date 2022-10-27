@@ -23,14 +23,12 @@ const Header = ({ user, withSearch }: HeaderProps) => {
 
   const notLoggedinRender = (
     <div className='flex items-center gap-5'>
-      <Link href='/signin'>
-        <a className='secondary-button flex items-center gap-1 px-4'>
-          <UserCircleIcon className='w-5 h-5' />
-          Sign In
-        </a>
+      <Link href='/signin' className='secondary-button flex items-center gap-1 px-4'>
+
+        <UserCircleIcon className='w-5 h-5' />Sign In
       </Link>
-      <Link href='/signup'>
-        <a className='primary-button px-4'>Sign Up</a>
+      <Link href='/signup' className='primary-button px-4'>
+        Sign Up
       </Link>
     </div>
   );
