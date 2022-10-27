@@ -28,7 +28,7 @@ const NavLink = ({ icon, label, href, shortcut, nav }: NavLinkProps) => {
   });
 
   return (
-    <Link href={href} legacyBehavior>
+    <Link href={href}>
       {nav ? (
         <div
           className={`flex px-3 py-1 rounded-full items-center cursor-pointer ${

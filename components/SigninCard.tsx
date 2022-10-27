@@ -43,21 +43,17 @@ const SigninCard = () => {
           <button type='submit' className='primary-button text-lg w-full'>
             Sign In
           </button>
-          <Link
-            href=''
-            className=' block text-center underline hover:opacity-80 transition-opacity duration-200 '>
-            
+          <Link href=''>
+            <a className=' block text-center underline hover:opacity-80 transition-opacity duration-200 '>
               Forgot your password?
-            
+            </a>
           </Link>
           <p className='text-center'>
             No account?{' '}
-            <Link
-              href='/signup'
-              className='underline hover:opacity-80 transition-opacity duration-200  '>
-              
+            <Link href='/signup'>
+              <a className='underline hover:opacity-80 transition-opacity duration-200  '>
                 Create one
-              
+              </a>
             </Link>{' '}
           </p>
           <button

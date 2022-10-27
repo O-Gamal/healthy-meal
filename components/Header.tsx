@@ -16,22 +16,21 @@ const Header = ({ user, withSearch }: HeaderProps) => {
       width={50}
       height={50}
       alt='profile photo'
-      style={{ objectFit: 'cover' }}
+      objectFit='cover'
       className='duration-300 rounded-full cursor-pointer'
     />
   );
 
   const notLoggedinRender = (
     <div className='flex items-center gap-5'>
-      <Link
-        href='/signin'
-        className='secondary-button flex items-center gap-1 px-4'
-      >
-        <UserCircleIcon className='w-5 h-5' />
-        Sign In
+      <Link href='/signin'>
+        <a className='secondary-button flex items-center gap-1 px-4'>
+          <UserCircleIcon className='w-5 h-5' />
+          Sign In
+        </a>
       </Link>
-      <Link href='/signup' className='primary-button px-4'>
-        Sign Up
+      <Link href='/signup'>
+        <a className='primary-button px-4'>Sign Up</a>
       </Link>
     </div>
   );
