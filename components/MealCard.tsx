@@ -36,7 +36,7 @@ const MealCard = ({
         alt={name}
         width={400}
         height={250}
-        style={{ objectFit: 'cover' }}
+        objectFit='cover'
         className='rounded-lg cursor-pointer hover:opacity-80 transition-opacity'
       />
       <section className='p-5 space-y-8'>
@@ -67,7 +67,7 @@ const MealCard = ({
               alt={user.name}
               width={30}
               height={30}
-              style={{ objectFit: 'cover' }}
+              objectFit='cover'
               className='rounded-full'
             />
             <p className='font-sm'>
