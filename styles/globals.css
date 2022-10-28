@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
 @layer components {
   .primary-button {
     @apply bg-green text-dark-secondary py-2 font-semibold hover:bg-opacity-90 transition-opacity duration-200 rounded-md;

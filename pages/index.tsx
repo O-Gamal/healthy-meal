@@ -9,7 +9,7 @@ import { meals, MealType } from '../TestData';
 
 const Home: NextPage = () => {
   return (
-    <Layout withSearch>
+    <Layout withSearch user={{ name: 'Omar' }}>
       <main className='w-full space-y-10'>
         {/* <h2 className='text-3xl font-bold'>Home</h2> */}
         <section className='space-y-5'>

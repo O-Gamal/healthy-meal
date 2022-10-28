@@ -17,6 +17,7 @@ interface SelectProps {
   label: string;
   name: string;
   id?: string;
+  children: React.ReactNode;
 }
 
 export const TextInput = ({ label, ...props }: TextInputProps) => {
@@ -29,10 +30,10 @@ export const TextInput = ({ label, ...props }: TextInputProps) => {
           {label}
         </label>
         {meta.touched && meta.error ? (
-          <div className='text-center text-red-500'>{meta.error}</div>
+          <div className='text-center text-red'>{meta.error}</div>
         ) : null}
       </div>
-      <input className='input text-lg dark:bg-zinc-900' {...field} {...props} />
+      <input className='input text-lg' {...field} {...props} />
     </div>
   );
 };
@@ -53,7 +54,7 @@ export const Checkbox = ({ children, ...props }: CheckboxProps) => {
       </label>
 
       {meta.touched && meta.error ? (
-        <div className='inline-block text-red-500'>{meta.error}</div>
+        <div className='inline-block text-red'>{meta.error}</div>
       ) : null}
     </div>
   );
@@ -69,14 +70,10 @@ export const Select = ({ label, ...props }: SelectProps) => {
           {label}
         </label>
         {meta.touched && meta.error ? (
-          <div className='text-center text-red-500'>{meta.error}</div>
+          <div className='text-center text-red'>{meta.error}</div>
         ) : null}
       </div>
-      <select
-        {...field}
-        {...props}
-        className='layout-border w-full rounded-md text-lg dark:bg-zinc-900'
-      />
+      <select {...field} {...props} className='input w-full' />
     </div>
   );
 };
