@@ -6,7 +6,7 @@ import { TextInput } from './utils/FormElements';
 
 const SigninCard = () => {
   return (
-    <section className='bg-dark-secondary p-10 max-w-screen-sm mx-auto'>
+    <section className='bg-dark-secondary p-10 max-w-screen-sm mx-auto rounded-lg'>
       <h1 className='text-2xl text-center font-semibold mb-10'>Sign In</h1>
       <Formik
         initialValues={{
