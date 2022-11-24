@@ -6,7 +6,9 @@ import SignupCard from '../components/SignupCard';
 const SignupPage: NextPage = () => {
   return (
     <Layout title='Sign up'>
-      <SignupCard />
+      <section className='py-10'>
+        <SignupCard />
+      </section>
     </Layout>
   );
 };

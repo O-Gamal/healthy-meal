@@ -3,7 +3,10 @@ import { Dropzone } from '@mantine/dropzone';
 import Image from 'next/image';
 import { useState } from 'react';
 
-const AvatarUploader = ({ setPhoto }) => {
+interface AvatarUploaderProps {
+  setPhoto: React.Dispatch<React.SetStateAction<{}>>;
+}
+const AvatarUploader = ({ setPhoto }: AvatarUploaderProps) => {
   const [avatarPhoto, setAvatarPhoto] = useState('');
 
   return (

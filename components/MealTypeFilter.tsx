@@ -18,7 +18,7 @@ const MealTypeFilter = () => {
   };
 
   return (
-    <section className='flex justify-center gap-5 items-center'>
+    <section className='flex justify-center gap-5 items-center flex-wrap'>
       <Switch
         size='md'
         label={
