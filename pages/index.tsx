@@ -13,13 +13,13 @@ const Home: NextPage = () => {
       <main className='w-full space-y-10'>
         {/* <h2 className='text-3xl font-bold'>Home</h2> */}
         <section className='space-y-5'>
-          <section className='flex justify-center gap-5'>
+          <section className='flex flex-col justify-center gap-5 lg:flex-row'>
             <MealsFilterCard />
             <RecommendCard />
           </section>
-          <MealTypeFilter />
         </section>
-        <section className='flex gap-5 justify-center flex-wrap w-full pb-28'>
+        <MealTypeFilter />
+        <section className='flex w-full flex-wrap justify-center gap-5 pb-28'>
           {meals.map((meal: MealType, index: number) => (
             <MealCard
               key={index}

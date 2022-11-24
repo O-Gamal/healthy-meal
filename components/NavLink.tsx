@@ -31,10 +31,10 @@ const NavLink = ({ icon, label, href, shortcut, nav }: NavLinkProps) => {
     <Link href={href}>
       {nav ? (
         <div
-          className={`flex px-3 py-1 rounded-full items-center cursor-pointer ${
+          className={`flex cursor-pointer items-center rounded-full px-3 py-1 ${
             current
-              ? 'bg-green text-dark-primary font-semibold'
-              : 'bg-dark-secondary bg-opacity-50 hover:bg-opacity-100 transition-opacity duration-200'
+              ? 'bg-green font-semibold text-dark-primary'
+              : 'bg-dark-secondary bg-opacity-50 transition-opacity duration-200 hover:bg-opacity-100'
           }`}
         >
           <Tooltip
@@ -48,13 +48,13 @@ const NavLink = ({ icon, label, href, shortcut, nav }: NavLinkProps) => {
           >
             <div className='flex items-center gap-2'>
               {icon}
-              <p className='text-lg'>{label}</p>
+              <p className='hidden text-lg md:block'>{label}</p>
             </div>
           </Tooltip>
           {/* <span className='hidden lg:block text-sm mx-1 bg-gunmetal bg-opacity-20 w-5 text-center rounded-sm h-5'>{shortcut}</span> */}
         </div>
       ) : (
-        <div className='flex hover:opacity-90 px-3 py-1 rounded-full items-center cursor-pointer bg-purple text-dark-primary font-semibold gap-1'>
+        <div className='flex cursor-pointer items-center gap-1 rounded-full bg-purple px-3 py-1 font-semibold text-dark-primary hover:opacity-90'>
           <Tooltip
             color='#FAFBFB'
             openDelay={1000}
@@ -66,7 +66,9 @@ const NavLink = ({ icon, label, href, shortcut, nav }: NavLinkProps) => {
           >
             <div className='flex items-center gap-2'>
               {icon}
-              <p className='text-lg'>{label}</p>
+              <p className='hidden whitespace-nowrap text-lg lg:block'>
+                {label}
+              </p>
             </div>
           </Tooltip>
         </div>

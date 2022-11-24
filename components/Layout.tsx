@@ -1,3 +1,4 @@
+import { gql, useQuery } from '@apollo/client';
 import Head from 'next/head';
 import React from 'react';
 import Header from './Header';
@@ -18,6 +19,21 @@ const Layout = ({
   user,
   withSearch,
 }: LayoutProps) => {
+  const GET_CURRENT_USER = gql`
+    query {
+      getCurrentUser {
+        name
+      }
+    }
+  `;
+
+  const { data: currentUser, error, loading } = useQuery(GET_CURRENT_USER);
+
+  if (loading) console.log('loading');
+  if (error) console.log(error);
+
+  if (!loading && !error) console.log(currentUser);
+
   return (
     <div className='w-full'>
       <Head>
